@@ -1,14 +1,8 @@
-#############################################################################
-##
-##  Tools.gi                                          LessGenerators package
-##
-##  Copyright 2015, Mohamed Barakat, University of Kaiserslautern
-##                  Vinay Wagh, Indian Institute of Technology Guwahati
-##
-##  Implementations for tools.
-##
-#############################################################################
-
+# SPDX-License-Identifier: GPL-2.0-or-later
+# LessGenerators: Find smaller generating sets for modules
+#
+# Implementations
+#
 
 ####################################
 #
@@ -123,7 +117,7 @@ InstallGlobalFunction( InstallHeuristicForRightInverseOfARow,
         
         l := CleanRowUsingMonicUptoUnit( row, 1 );
         
-        Assert( 4, IsOne( MatElm( l[1], 1, 1 ) ) );
+        Assert( 4, IsOne( l[1][ 1, 1 ] ) );
         Assert( 4, ZeroColumns( l[1] ) = [ 2 .. NrColumns( row ) ] );
         
         return [ V * l[2], l[3] * U ];

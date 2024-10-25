@@ -1,4 +1,4 @@
-#! @System SuslinLemma:3arg
+#! @Chunk SuslinLemma:3arg
 
 LoadPackage( "LessGenerators" );
 
@@ -45,10 +45,10 @@ SuslinLemma( f, G, 1 );
 #! @EndExample
 
 
-#! @System SuslinLemma:4arg
+#! @Chunk SuslinLemma:4arg
 
-#! @Example
 #! Continuing of the previous example:
+#! @Example
 row := HomalgMatrix( [ h, G, f, g + h ], 1, 4, R );;
 sus := SuslinLemma( row, 3, 2, 1 );
 #! [ <An unevaluated 1 x 4 matrix over an external ring>,

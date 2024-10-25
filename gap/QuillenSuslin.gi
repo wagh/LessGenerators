@@ -1,14 +1,8 @@
-#############################################################################
-##
-##  QuillenSuslin.gi                                  LessGenerators package
-##
-##  Copyright 2007-2015, Mohamed Barakat, University of Kaiserslautern
-##                       Anna Fabiańska, RWTH-Aachen University
-##                       Vinay Wagh, Indian Institute of Technology Guwahati
-##
-##  Implementations for core procedures for Quillen-Suslin.
-##
-#############################################################################
+# SPDX-License-Identifier: GPL-2.0-or-later
+# LessGenerators: Find smaller generating sets for modules
+#
+# Implementations
+#
 
 ####################################
 #
@@ -118,7 +112,7 @@ InstallMethod( QuillenSuslin,
     Assert( 4, row_new = Value( row, y, Zero( y ) ) );
     row := row_new;
     
-    u := MatElm( U, 1, 1 );
+    u := U[ 1, 1 ];
     IsOne( u );
     IsMinusOne( u );
     

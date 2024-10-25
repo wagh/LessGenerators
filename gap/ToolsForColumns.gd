@@ -1,13 +1,8 @@
-#############################################################################
-##
-##  ToolsForColumns.gd                                LessGenerators package
-##
-##  Copyright 2015, Mohamed Barakat, University of Kaiserslautern
-##                  Vinay Wagh, Indian Institute of Technology Guwahati
-##
-##  Declarations for tools for columns.
-##
-#############################################################################
+# SPDX-License-Identifier: GPL-2.0-or-later
+# LessGenerators: Find smaller generating sets for modules
+#
+# Declarations
+#
 
 #! @Chapter Tools
 
@@ -87,7 +82,7 @@ DeclareOperation( "GetObsoleteRowForUnimodularity",
 #!   It returns a list of two matrices <C>U</C> and <C>UI</C> such that
 #!   <C>U</C> * <A>col</A> = Column( [ 1 0 0 ... 0 ] ) and the first column
 #!   of <C>UI</C> is the given column.
-#! @InsertSystem Eliminate-If-Obsolete-For-Unimodularity-Rows
+#! @InsertChunk Eliminate-If-Obsolete-For-Unimodularity-Rows
 #! @Arguments col
 #! @Returns a list
 DeclareOperation( "EliminateIfRowObsoleteForUnimodularity",
@@ -110,7 +105,7 @@ DeclareOperation( "GetUnimodularPairPositionPerColumn",
 #!   It returns a list of two matrices <C>U</C> and <C>UI</C> such that
 #!   <C>U</C> * <A>col</A> = Column( [ 1 0 0 ... 0 ] ) and the first column
 #!   of <C>UI</C> is the given column.
-#! @InsertSystem Eliminate-Unimodular-Pair-Position-Per-Column
+#! @InsertChunk Eliminate-Unimodular-Pair-Position-Per-Column
 #! @Arguments col
 #! @Returns a list
 DeclareOperation( "EliminateUnimodularPairPositionPerColumn",

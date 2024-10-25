@@ -1,14 +1,8 @@
-#############################################################################
-##
-##  LessGenerators.gi                                 LessGenerators package
-##
-##  Copyright 2007-2015, Mohamed Barakat, University of Kaiserslautern
-##                       Anna Fabiańska, RWTH-Aachen University
-##                       Vinay Wagh, Indian Institute of Technology Guwahati
-##
-##  Implementation stuff for LessGenerators.
-##
-#############################################################################
+# SPDX-License-Identifier: GPL-2.0-or-later
+# LessGenerators: Find smaller generating sets for modules
+#
+# Implementations
+#
 
 ####################################
 #
@@ -104,16 +98,16 @@ InstallGlobalFunction( OnLessGenerators_UsingParametrization,
 end );
 
 ##
-#InstallMethod( OnLessGenerators,
-#        "for stably free modules of rank 1",
-#        [ IsFinitelyPresentedModuleRep and
-#          IsStablyFree and FiniteFreeResolutionExists ],
-#        
-#  OnLessGenerators_ForStablyFreeRank1OverCommutative );
-#
+InstallMethod( OnLessGenerators,
+        "for stably free modules of rank 1",
+        [ IsFinitelyPresentedModuleRep and
+          IsStablyFree and FiniteFreeResolutionExists ],
+        
+  OnLessGenerators_ForStablyFreeRank1OverCommutative );
+
 ##
-#InstallMethod( OnLessGenerators,
-#        "for modules",
-#        [ IsFinitelyPresentedModuleRep  ], 101,
-#        
-#  OnLessGenerators_UsingParametrization );
+InstallMethod( OnLessGenerators,
+        "for modules",
+        [ IsFinitelyPresentedModuleRep  ], 101,
+        
+  OnLessGenerators_UsingParametrization );

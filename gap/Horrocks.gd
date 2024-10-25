@@ -1,15 +1,8 @@
-#############################################################################
-##
-##  Horrocks.gd                                       LessGenerators package
-##
-##  Copyright 2007-2015, Mohamed Barakat, University of Kaiserslautern
-##                       Anna Fabiańska, RWTH-Aachen University
-##                       Vinay Wagh, Indian Institute of Technology Guwahati
-##
-##  Declarations for core procedures for Quillen-Suslin.
-##
-#############################################################################
-
+# SPDX-License-Identifier: GPL-2.0-or-later
+# LessGenerators: Find smaller generating sets for modules
+#
+# Declarations
+#
 
 #! @Chapter Quillen-Suslin
 
@@ -29,7 +22,7 @@
 #!  Returns a linear combination of <A>f</A> and <A>g</A> with
 #!  leading coefficient being the <A>j</A>-th coefficient of <A>g</A>.
 #!  <A>f</A> has to be monic.
-#!  @InsertSystem SuslinLemma:3arg
+#!  @InsertChunk SuslinLemma:3arg
 #! @Arguments f, g, j
 #! @Returns a &homalg; ring element
 DeclareOperation( "SuslinLemma",
@@ -46,7 +39,7 @@ DeclareOperation( "SuslinLemma",
 #!  <M>f</M> has to be monic and <C>bj</C> is a unit.<Br/>
 #!  The corresponding method should make use of the three argument <Ref Oper="SuslinLemma" Label="for IsHomalgRingElement, IsHomalgRingElement, IsInt"/>.
 #!  @InsertCode SuslinLemmaCode:4arg
-#!  @InsertSystem SuslinLemma:4arg
+#!  @InsertChunk SuslinLemma:4arg
 #! @Arguments row, pos_f, pos_g, j
 #! @Returns a list
 DeclareOperation( "SuslinLemma",
@@ -58,7 +51,7 @@ DeclareOperation( "SuslinLemma",
 #!  <C>TI</C> is the inverse matrix of <C>T</C>.<Br/>
 #!  <A>row</A> is a unimodular matrix with at least 3 entries
 #!  in which the <A>o</A>-th entry is monic.
-#!  @InsertSystem Horrocks
+#!  @InsertChunk Horrocks
 #! @Arguments row, o
 #! @Returns a list
 DeclareOperation( "Horrocks",
@@ -72,7 +65,7 @@ DeclareOperation( "Horrocks",
 #!  over a localization of <M>R</M> defined by various maximal ideals of <M>B</M>.<Br/>
 #!  <A>VIs</A><M>[j]</M> is the inverse of <A>Vs</A><M>[j]</M>. The denominators of <A>Vs</A><M>[j]</M>
 #!  must generate the unit ideal of <M>B</M>.
-#!  @InsertSystem Patch
+#!  @InsertChunk Patch
 #! @Arguments row, Vs, VIs
 #! @Returns a &homalg; matrix
 DeclareOperation( "Patch",
